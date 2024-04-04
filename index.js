@@ -11,13 +11,11 @@ app.use(bodyParser.json({ limit: '10mb' }));
 const test = require('./router/test.js');
 const push = require('./router/push.js');
 const camera = require('./router/camera.js');
-const box = require('./router/dropbox.js');
 const vue = require('./router/vuetest.js');
 
 app.use('/', test);
 app.use('/push', push);
 app.use('/camera', camera);
-app.use('/box', box);
 app.use('/vue', vue);
 
 
