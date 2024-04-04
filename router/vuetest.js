@@ -37,7 +37,7 @@ vueRouter.delete('/delete', async function (req, res) {
 
 vueRouter.get('/create', async function (req, res) {
   const q = `
-    CREATE TABLE test2.conut(
+    CREATE TABLE test.member(
       num INT NOT NULL AUTO_INCREMENT,
       name VARCHAR(20),
       email VARCHAR(100),
