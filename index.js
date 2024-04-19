@@ -12,11 +12,13 @@ const test = require('./router/test.js');
 const push = require('./router/push.js');
 const camera = require('./router/camera.js');
 const vue = require('./router/vuetest.js');
+const sudoku = require('./router/sudoku.js');
 
 app.use('/', test);
 app.use('/push', push);
 app.use('/camera', camera);
 app.use('/vue', vue);
+app.use('/sudoku', sudoku);
 
 
 app.listen(3000)
