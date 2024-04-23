@@ -1,0 +1,4 @@
+#안보이게 하는 용도
+.env*.local
+.env.development
+.env.production
