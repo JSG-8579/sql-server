@@ -1,7 +1,7 @@
-const vueRouter = require('express').Router();
+const sudokuRouter = require('express').Router();
 const query = require('../lib/db2');
 
-vueRouter.get('/', async function (req, res) {
+sudokuRouter.get('/', async function (req, res) {
     const data = await query.queryExecute('SELECT * FROM member');
     console.log('fasfsad', data)
     res.send(data);
@@ -9,7 +9,7 @@ vueRouter.get('/', async function (req, res) {
 
 
 
-vueRouter.post('/', async function (req, res) {
+sudokuRouter.post('/', async function (req, res) {
   const {difficult, name, time} = req.body;
   // console.log('name',name)
   const data = await query.queryExecute(`insert into member (difficult, name, time) values (?,?,?)`,[difficult, name, time]) //추가
@@ -18,4 +18,4 @@ vueRouter.post('/', async function (req, res) {
 })
 
 
-  module.exports = vueRouter;
+  module.exports = sudokuRouter;
