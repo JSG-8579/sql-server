@@ -3,7 +3,7 @@ const query = require('../lib/db2');
 
 sudokuRouter.get('/', async function (req, res) {
     const data = await query.queryExecute('SELECT * FROM member');
-    console.log('fasfsad', data)
+    console.log('fasfsad======', data)
     res.send(data);
 })
 
